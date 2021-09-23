@@ -5,8 +5,7 @@ const Customer = require("./models/Customer")
 const mongoose= require("mongoose")
 const validator = require("validator")
 const app = express()
-const bcrypt = require('bcrypt');
-const { send } = require("process")
+const bcrypt = require('bcrypt')
 const saltRounds = 10;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"))

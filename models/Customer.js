@@ -1,7 +1,6 @@
 const mongoose = require("mongoose")
 const validator = require("validator")
 const bodyParser = require("body-parser")
-const bcrypt = require('bcrypt');
 const customerSchema = new mongoose.Schema(
     {
         country_residence: {type: String, required: true},
