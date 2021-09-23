@@ -68,10 +68,10 @@ else
 }
 })
 })
-app.get('/index'), (req, res)=>
+app.get('/index', (req, res)=>
 {
-    res.sendFile(__dirname + "/index.html")
-}
+    res.sendFile(__dirname + "/index.html")})
+
 
 app.post('/index', (req, res) => {
     const inputEmail = req.body.inputEmail
