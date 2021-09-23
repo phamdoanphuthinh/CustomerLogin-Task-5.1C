@@ -68,9 +68,9 @@ else
 }
 })
 })
-app.get('/index', (req, res)=>
-{
-    res.sendFile(__dirname + "/index.html")})
+
+
+
 
 
 app.post('/index', (req, res) => {
