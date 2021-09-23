@@ -5,9 +5,9 @@ const Customer = require("./models/Customer")
 const mongoose= require("mongoose")
 const validator = require("validator")
 const app = express()
-const bcryptjs = require('bcryptjs')
+const bcrypt = require('bcrypt')
 const saltRounds = 10;
-module.exports.bcryptjs = bcryptjs;
+module.exports.bcrypt = bcrypt;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"))
 
@@ -35,7 +35,7 @@ app.post('/custlogin', (req,res,)=>{
     const zip= req.body.zip
     const mobile_phone= req.body.mobile_phone
     
-    bcryptjs.hash(password, saltRounds, function(err, hash){
+    bcrypt.hash(password, saltRounds, function(err, hash){
 
     const customer = new Customer(
         {
@@ -86,7 +86,7 @@ app.post('/custtask', (req, res) => {
             res.status(400).send({message: "This email is not existing!"})
         }
         else{ 
-	bcryptjs.compare(inputPassword, data.password, function(err, result){
+	bcrypt.compare(inputPassword, data.password, function(err, result){
         if(!result)
         {
             console.log("Login unsuccessfully!")
