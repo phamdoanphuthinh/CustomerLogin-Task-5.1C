@@ -7,6 +7,7 @@ const validator = require("validator")
 const app = express()
 const bcrypt = require('bcrypt')
 const saltRounds = 10;
+module.exports.bcrypt = bcrypt;
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(express.static("public"))
 
