@@ -17,7 +17,7 @@ app.get('/', (req, res)=>{
 
 mongoose.connect("mongodb+srv://admin-doanphuthinhpham:phuthinh2009@cluster0.vl3sl.mongodb.net/Customer?retryWrites=true&w=majority",{useNewUrlParser: true})
 
-app.post('/', (req,res,)=>{
+app.post('/custlogin', (req,res,)=>{
 
     const firstname = req.body.firstname
     const lastname = req.body.lastname
@@ -59,7 +59,7 @@ customer
     
 if (res.statusCode === 200)
         {
-            res.sendFile(__dirname + "/index.html")
+            res.sendFile(__dirname + "/custlogin.html")
         }
 else
 {
@@ -69,11 +69,14 @@ else
 })
 })
 
+app.get('/index', (req,res)=>{
+    res.sendFile(__dirname + "/custlogin.html")
+  
+})
 
 
 
-
-app.post('/index', (req, res) => {
+app.post('/custtask', (req, res) => {
     const inputEmail = req.body.inputEmail
     const inputPassword = req.body.inputPassword
 	Customer.findOne({email:inputEmail}, function(err,data){
