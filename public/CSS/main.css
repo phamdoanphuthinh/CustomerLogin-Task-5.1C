@@ -1,0 +1,31 @@
+h2{ color: blue;
+text-align:center}
+body{
+	color:black;
+     background-color:#CCCCCC;
+     font-weight:bolder;
+     font-style:normal;
+     font-family: Arial, Helvetica, sans-serif;
+     width: auto;
+     display: block;
+     margin-left:0;
+     margin-right:0;}
+.signup-form{
+    padding-left: 300px;
+    width: auto;
+}
+p{font-size: 25px;
+font-weight: bold;
+color:red}
+.column{
+    float: left;    
+    width: 17%;  
+    padding-left: 15px;
+}
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+
